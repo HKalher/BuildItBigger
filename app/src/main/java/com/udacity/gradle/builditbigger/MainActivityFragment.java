@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 
 /**
  * A placeholder fragment containing a simple view.
@@ -34,22 +31,13 @@ public class MainActivityFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         Button buttonOne = (Button) getActivity().findViewById(R.id.button_one);
-        Button buttonTwo = (Button) getActivity().findViewById(R.id.button_two);
-
-        final TextView jokeTextView = (TextView) getActivity().findViewById(R.id.joke_content_textview);
 
         buttonOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new JokeAsyncTask(getContext(), jokeTextView).execute();
+                new JokeAsyncTask(getContext()).execute();
             }
         });
 
-        buttonTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new JokeAsyncTask(getContext(), jokeTextView).execute();
-            }
-        });
     }
 }

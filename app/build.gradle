@@ -34,10 +34,11 @@ dependencies {
     // Added for AdMob
     compile project(path: ':backend_android_library', configuration: 'android-endpoints')
     compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.google.android.gms:play-services-ads:9.8.0'
+    freeCompile 'com.google.android.gms:play-services-ads:9.8.0'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.android.support:cardview-v7:24.2.1'
     compile 'com.android.support:support-v4:24.2.1'
     compile 'com.android.support:support-annotations:23.2.1'
     androidTestCompile 'junit:junit:4.12'
+    compile project(path: ':joke_android_library')
 }

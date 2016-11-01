@@ -55,43 +55,14 @@
                 android:background="@color/seprator">
             </View>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <Button
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:layout_marginTop="@dimen/joke_header_top_margin"
-                android:layout_marginBottom="@dimen/joke_header_bottom_margin"
-                android:layout_marginLeft="@dimen/text_initial_margin"
-                android:layout_marginRight="@dimen/text_ending_margin">
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="40"
-                    android:id="@+id/button_one"
-                    android:text="@string/button_one_text"
-                    android:textColor="@color/white"
-                    android:background="@drawable/button_shape"/>
-
-                <!-- To get the weight_sum working properly we have to set layout_width="0"
-                in horizontal linearLayout and similarly layout_height="0" in vertical linearLayout. -->
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="30">
-                </View>
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="30"
-                    android:id="@+id/button_two"
-                    android:text="@string/button_two_text"
-                    android:textColor="@color/white"
-                    android:background="@drawable/button_shape"/>
-
-            </LinearLayout>
+                android:layout_gravity="center"
+                android:id="@+id/button_one"
+                android:text="@string/button_one_text"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shape"/>
 
         </LinearLayout>
 

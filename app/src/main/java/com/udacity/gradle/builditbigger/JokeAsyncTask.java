@@ -1,6 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.TextView;
 
@@ -9,6 +10,7 @@ import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+import com.kalher.henu.jokeandroidlibrary.JokeActivity;
 
 import java.io.IOException;
 
@@ -20,11 +22,11 @@ public class JokeAsyncTask extends AsyncTask<Context, Void, String>{
 
     MyApi myApi;
     Context mContext;
-    TextView textView;
+//    TextView textView;
 
-    public JokeAsyncTask(Context mContext, TextView textView){
+    public JokeAsyncTask(Context mContext){
         this.mContext = mContext;
-        this.textView = textView;
+//        this.textView = textView;
         MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null).setRootUrl("https://builditbigger-148004.appspot.com/_ah/api/").setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
             @Override
             public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
@@ -55,7 +57,10 @@ public class JokeAsyncTask extends AsyncTask<Context, Void, String>{
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
 
-        textView.setText(s);
+        Intent intent = new Intent(mContext, JokeActivity.class);
+        intent.putExtra("joke",s);
+        mContext.startActivity(intent);
+//        textView.setText(s);
     }
 }
 /**

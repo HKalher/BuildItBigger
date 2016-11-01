@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JokeAndroidLibrary</string>
+
+    <string name="instructions">Press the button for a delicious joke!</string>
+
+    <string name="button_two_text">Next</string>
+    <string name="header">Get Some Funny Jokes</string>
+
+    <string name="error_response_string">Oops! Some error occured</string>
+</resources>

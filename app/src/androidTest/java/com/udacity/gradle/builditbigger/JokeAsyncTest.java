@@ -24,7 +24,7 @@ public class JokeAsyncTest extends AndroidTestCase{
     protected void setUp() throws Exception {
         super.setUp();
 
-        jokeAsyncTask = new JokeAsyncTask(getContext(), null);
+        jokeAsyncTask = new JokeAsyncTask(getContext());
     }
 
     @Test

@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/backend_android_library" />
+            <option value="$PROJECT_DIR$/joke_android_library" />
             <option value="$PROJECT_DIR$/joke_java_library" />
           </set>
         </option>
